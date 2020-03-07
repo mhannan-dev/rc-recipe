@@ -42,11 +42,12 @@ const App =()=>{
       <div>
         <div className="container">
             <form action="" onSubmit={getSearch}>
-                <input type="text" value={search} onChange={updateSearch}/>
-                <input type="submit" value="Search"/>
+                <input className="form-control" type="text" value={search} onChange={updateSearch}/>
+                <input className="btn btn-primary btn-lg btn-block mt-2" type="submit" value="Search"/>
             </form>
-            <div className="recipe_box">
+
                 {recipes.map(recipe =>(
+
                     <Recipe
                         title={recipe.recipe.label}
                         calories={recipe.recipe.calories}
@@ -54,8 +55,6 @@ const App =()=>{
                         ingredients={recipe.recipe.ingredients}
                     />
                 ))}
-
-            </div>
 
         </div>
 
