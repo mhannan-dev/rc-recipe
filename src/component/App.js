@@ -41,7 +41,7 @@ const App =()=>{
   return(
       <div>
         <div className="container">
-            <form action="" onSubmit={getSearch}>
+            <form action="" onSubmit={getSearch} className="mt-2">
                 <input className="form-control" type="text" value={search} onChange={updateSearch}/>
                 <input className="btn btn-primary btn-lg btn-block mt-2" type="submit" value="Search"/>
             </form>
